@@ -4,17 +4,83 @@
 
 /*////////// Global Styles //////////*/
 
+
+
 body {
 	background: #F3EBE9;
 	font-size: 100%;
 	font-family: 'Times New Roman', serif; 
 }
 
+
 .wrapper {
-	width: 960px;
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
 	background: #fff;
-	padding: 0 45px 20px;
+	display: grid;
+	grid-template-columns: 1fr, 3fr, 1fr;
+	grid-auto-rows: auto;
+	grid-template-areas:
+	"a b b b c";
+	align-items: start;
+
 }
 
 /* Write all remaining styles here */
+
+.body-border {
+	grid-area: a, c;
+	background-color: rgb(242, 235, 233);
+
+	min-width: 90px;
+	min-height: 100%;
+}
+
+.main-body {
+	grid-area: b;
+	background-color: #fff;
+	padding: 3%;
+	margin: auto;
+}
+
+.name-header {
+	font-family: cursive;
+	font-size: 300%;
+	color: rgb(158, 173, 168);
+}
+
+.heading{
+	color: rgb(116, 126, 115);
+}
+
+.display-image {
+	box-sizing: border-box;
+	margin: auto;
+	width: 100%;
+	border: 5px solid rgb(158, 171, 166);
+}
+
+.fit-picture {
+	width: 100%;
+}
+
+.press-box {
+	display: inline-block;
+	padding: 2px;
+	width: 23%;
+	background: rgb(203, 204, 204);
+}
+
+.press-box:hover {
+	background-color: rgb(115, 128, 123);
+	cursor: pointer;
+
+}
+
+.copyright {
+	float: right;
+}
